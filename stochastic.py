@@ -4,6 +4,11 @@ import sys
 from histogram import get_words_list
 from histogram import create_histogram
 
+def get_prob_word(histogram, count):
+    rand_index = random.randint(1, count)
+    rand_word = histogram[rand_index]
+    return rand_word
+
 def get_count(histogram):
     count = 0
     for key,value in histogram.iteritems():
@@ -23,7 +28,8 @@ def my_app(file_name):
     histogram = create_histogram(words_list)
     # random_word = get_random_word(histogram)
     count = get_count(histogram)
-    print count
+    prob_word = get_prob_word(histogram, count)
+    print prob_word
 
 
 
