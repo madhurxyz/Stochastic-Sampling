@@ -4,10 +4,16 @@ import sys
 from histogram import get_words_list
 from histogram import create_histogram
 
+def get_random_word(histogram):
+    word_list = []
+    for key, value in histogram.iteritems():
+        word_list.append(key)
+    return words_list
+
 def my_app(file_name):
     words_list = get_words_list(file_name)
     histogram = create_histogram(words_list)
-    print histogram
+    random_word = get_random_word(histogram)
 
 
 
