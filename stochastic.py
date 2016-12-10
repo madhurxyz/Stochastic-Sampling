@@ -6,8 +6,11 @@ from histogram import create_histogram
 
 def get_prob_word(histogram, count):
     rand_index = random.randint(1, count)
-    rand_word = histogram[rand_index]
-    return rand_word
+    prob_total = 0
+    for key, value in histogram.iteritems():
+        prob_total += value
+        if rand_index <= prob_total:
+            return key
 
 def get_count(histogram):
     count = 0
