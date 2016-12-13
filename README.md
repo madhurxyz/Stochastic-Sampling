@@ -4,11 +4,6 @@ This program analyzes a large body of text based on the word frequency. The prog
 
 ## Quick Start
 
-```pip install ...``` to get started.
+```python stochastic.py 'holmes.txt'``` passes the text file in the Stochastic program and returns a word from the file based on it's frequency.
 
-
-## How it Works
-
-```python histogram.py``` creates ...
-
-```python stochastic.py``` creates ...
+```histogram.py``` is being utilized by the ```stochastic.py``` function.
